@@ -7,9 +7,16 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="oasis.stars.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="oasis.stars.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        var stars = new Oasis.Stars($('#sky'), { currentScore: 3, rateURL: '' });
+      });
+    </script>
     <title>Oasis-stars by brianseitel</title>
   </head>
 
@@ -35,13 +42,16 @@
 
 <p>A jQuery-based star rating system by Brian Seitel.</p>
 
-<p><strong>Basic Usage</strong></p>
+<p><strong>Demo</strong></p>
+<p><div id="sky" data-id="1"></div></p>
+
+<p style="clear:both;"><strong>Basic Usage</strong></p>
 
 <pre><code>&lt;script src="jquery-latest.js"&gt;&lt;/script&gt;
 &lt;script src="oasis.stars.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
-  var stars = new Oasis.Stars($('#sky'), {});
+  var stars = new Oasis.Stars($('#sky'), { currentScore: 0 });
 &lt;/script&gt;
 
 &lt;div id="sky" data-id="1"&gt;&lt;/div&gt;
@@ -58,6 +68,8 @@
 <code>rateURL</code>: path to send the rating to (default: <code>rate.php</code>)</li>
 <li>
 <code>starCount</code>: number of stars to create (default: 5)</li>
+<li>
+  <code>currentScore</code>: current score (default: 0)</li>
 </ul>
         </section>
 
