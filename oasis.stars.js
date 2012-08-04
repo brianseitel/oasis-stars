@@ -48,12 +48,11 @@ var Oasis = {};
 
 		init: function(container, options) {
 			this.options = $.extend({
-				inputs: global.inputs,
-				delay: 1000,
 				onSuccess: $.noop,
 				onFail: $.noop,
 				rateURL: API.rate,
-				starCount: 5
+				starCount: 5,
+				currentScore: 0
 			}, options || {});
 
 
@@ -67,7 +66,7 @@ var Oasis = {};
 
 			this.bigBang(this.options.starCount); // Five stars
 			this.addEventListeners();
-			this.resetStars();
+			this.setStars(this.options.currentScore);
 		},
 
 		addEventListeners: function() { var
@@ -139,6 +138,13 @@ var Oasis = {};
 
 			this.container
 				.append(star);
+		},
+
+		setStars: function(score) {
+			this.stars.each(function(i, item) {
+				if (i < score)
+					$(item).addClass('hover');
+			});
 		},
 
 		resetStars: function() {

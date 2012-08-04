@@ -22,3 +22,4 @@ A jQuery-based star rating system by Brian Seitel.
 * ```onFail```: function to call upon failed rating (default: $.noop)
 * ```rateURL```: path to send the rating to (default: ```rate.php```)
 * ```starCount```: number of stars to create (default: 5)
+* ```currentScore```: current score (default: 0)
