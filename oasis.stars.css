@@ -1,0 +1,4 @@
+#sky { float: left; margin: 10px; }
+#sky .rating-label {  color: #FFF; font-variant: small-caps; font-family: "proxima-nova", sans-serif; text-decoration: none; float: left; padding-right: 5px;  }
+#sky .star { background: url('/star-empty-icon.png') top left no-repeat; width: 15px; height: 15px; float: left; display: block; margin: 0 2px; }
+#sky .star.hover { background: url('/star-icon.png') left top no-repeat; }
