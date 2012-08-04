@@ -8,6 +8,7 @@ A jQuery-based star rating system by Brian Seitel.
 ```
 <script src="jquery-latest.js"></script>
 <script src="oasis.stars.js"></script>
+<link rel="stylesheet" href="oasis.stars.css"/>
 
 <script>
   var stars = new Oasis.Stars($('#sky'), {});
